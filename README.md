@@ -1,7 +1,7 @@
 
 # 🍌 Banana Serverless
 
-This repo gives a basic framework for serving Stable Diffusion v2 in production using Fastapi. Does not need a Huggingface token, ready for 1-click deploy
+This repo is a template for using Stable Diffusion v2.0 on Banana;s serverless GPU platform with fastapi. Ready to be used for 1-Click deploy
 
 ## Instant Deploy
 Stable Diffusion is now available as a prebult model on Banana! [See how to deploy Stable Diffusion in seconds](https://docs.banana.dev/banana-docs/core-concepts/inference-server/1-click-deploy).

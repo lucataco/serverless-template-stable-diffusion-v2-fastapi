@@ -8,7 +8,12 @@ from PIL import Image
 
 model_inputs = {
     'prompt': 'an astronaut riding a horse',
-    'negative': 'drawing, sketch, cartoon'
+    'negative': 'drawing, sketch, cartoon',
+    'height': 768, 
+    'width': 768,
+    'num_inference_steps': 20, 
+    'guidance_scale': 7,
+    'input_seed': 0
 }
 
 res = requests.post('http://localhost:8000/', json = model_inputs)

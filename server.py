@@ -29,7 +29,7 @@ class Item(BaseModel):
 
 # Healthchecks verify that the environment is correct on Banana Serverless
 @app.get('/healthcheck')
-def healthcheck():
+async def healthcheck():
     # dependency free way to check if GPU is visible
     gpu = False
     out = subprocess.run("nvidia-smi", shell=True)
@@ -41,10 +41,10 @@ def healthcheck():
 
 # Inference POST handler at '/' is called for every http call from Banana
 @app.post('/') 
-def inference(model_inputs: Item):
+async def inference(model_inputs: Item):
     output = user_src.inference(vars(model_inputs))
     return output
 
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='0.0.0.0', port="8000")
+    uvicorn.run(app, host='0.0.0.0', port=8000)
